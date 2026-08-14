@@ -223,10 +223,10 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <div class="card-title">Airline Billing Analytics Pipeline</div>
         <span class="badge b-work">PHL · Work</span>
       </div>
-      <div class="metrics"><span class="metric">~21% of PHL operating revenue</span><span class="metric">4 fiscal years of data</span></div>
+      <div class="metrics"><span class="metric">~21% of PHL operating revenue</span><span class="metric">~40 hrs/month saved</span></div>
       <ul class="card-list">
         <li>Received monthly reports from every carrier across four fiscal years; wrote Python to extract and consolidate them into a single working dataset</li>
-        <li>Built an automated Alteryx workflow handling the cleaning and enrichment, replacing manual processing</li>
+        <li>Built an automated Alteryx workflow handling the cleaning and enrichment, replacing a manual Excel review process and surfacing anomalies it had missed</li>
         <li>Identified data discrepancies and anomalies within the source data and reported them onward</li>
         <li>Built a comprehensive automated Power BI dashboard covering airline activity — who flies, what aircraft, when, and where — designed to be reused each reporting cycle</li>
       </ul>
@@ -239,12 +239,13 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <div class="card-title">Ground Transportation Revenue Analytics</div>
         <span class="badge b-work">PHL · Work</span>
       </div>
-      <div class="metrics"><span class="metric">~9% of PHL operating revenue</span><span class="metric">4 fiscal years of data</span></div>
+      <div class="metrics"><span class="metric">~9% of PHL operating revenue</span><span class="metric">~20 hrs/month saved</span></div>
       <ul class="card-list">
-        <li>Source data sits in an enterprise SQL system, pulled into Amazon Redshift for management, then automated through into Power BI</li>
+        <li>Replaced direct SQL backend review — difficult to audit and impractical for hypothesis-forming — with a dashboard pulled from Amazon Redshift into Power BI</li>
         <li>Analyzed four fiscal years across TNC, off-airport parking, car rental, Turo, and Parkway revenue streams</li>
         <li>Identified the driving factors behind ground transportation revenue and the performance drivers within each stream</li>
         <li>Surfaced anomalies across the revenue streams and reported them for review</li>
+        <li>Integrated ground transportation transaction volumes with the airline billing pipeline to compute per-mode passenger capture rates, supporting curbside staffing and concession demand analysis</li>
       </ul>
       <div class="tags"><span class="tag">SQL</span><span class="tag">Amazon Redshift</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Anomaly Detection</span><span class="tag">Benford's Law</span></div>
       <div class="note">Built on internal airport data — code and dashboards are not public.</div>
@@ -447,8 +448,8 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
     <p class="f-body">Built three analytics workflows for the Finance Department, each automated and scalable so anyone on the team can run them. Defined and built out the workflows end to end and documented the process in a written report. Presented the workflows and the Power BI dashboards to senior management, walking through the revenue trends and the anomalies surfaced along the way.</p>
     <div class="f-stats">
       <div><div class="f-n">~30%</div><div class="f-l">Of operating revenue covered</div></div>
+      <div><div class="f-n">~60</div><div class="f-l">Hours/month of manual review saved</div></div>
       <div><div class="f-n">3</div><div class="f-l">Automated workflows built</div></div>
-      <div><div class="f-n">4</div><div class="f-l">Fiscal years of data</div></div>
     </div>
   </div>
 
