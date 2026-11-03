@@ -204,8 +204,8 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
       <div class="pill-group"><div class="pill-label">Databases &amp; Warehouse</div><div class="pills"><span class="pill">PostgreSQL</span><span class="pill">Snowflake</span><span class="pill">Redshift</span><span class="pill">BigQuery</span></div></div>
       <div class="pill-group"><div class="pill-label">Pipelines &amp; Transform</div><div class="pills"><span class="pill a">dbt</span><span class="pill a">Alteryx</span><span class="pill">Power Query</span><span class="pill">Parquet</span></div></div>
       <div class="pill-group"><div class="pill-label">BI &amp; Viz</div><div class="pills"><span class="pill a">Power BI</span><span class="pill a">Tableau</span><span class="pill">Streamlit</span><span class="pill">Excel</span></div></div>
-      <div class="pill-group"><div class="pill-label">ML &amp; AI</div><div class="pills"><span class="pill">scikit-learn</span><span class="pill">XGBoost</span><span class="pill">statsmodels</span><span class="pill">Mixed-Effects Models</span><span class="pill">ARIMA</span><span class="pill">Prophet</span><span class="pill">NLP</span><span class="pill">PyTorch</span><span class="pill a">LLM APIs</span></div></div>
-      <div class="pill-group"><div class="pill-label">Cloud</div><div class="pills"><span class="pill">GCP / Vertex AI</span><span class="pill">Azure</span><span class="pill">Docker</span></div></div>
+      <div class="pill-group"><div class="pill-label">ML &amp; AI</div><div class="pills"><span class="pill">scikit-learn</span><span class="pill">XGBoost</span><span class="pill">statsmodels</span><span class="pill">Mixed-Effects Models</span><span class="pill">ARIMA</span><span class="pill">Prophet</span><span class="pill">NLP</span><span class="pill">PyTorch</span><span class="pill">TensorFlow / Keras</span><span class="pill a">LLM APIs</span></div></div>
+      <div class="pill-group"><div class="pill-label">Cloud &amp; Tools</div><div class="pills"><span class="pill">GCP / Vertex AI</span><span class="pill">Kubeflow</span><span class="pill">GitHub Actions</span><span class="pill">Git</span><span class="pill">Linux</span></div></div>
     </div>
   </div>
 </section>
@@ -228,8 +228,8 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
       <div class="metrics"><span class="metric">~21% of PHL operating revenue</span><span class="metric">~40 hrs/month saved</span></div>
       <ul class="card-list">
         <li>Received monthly reports from every carrier across four fiscal years; wrote Python to extract and consolidate them into a single working dataset</li>
-        <li>Built an automated Alteryx workflow handling the cleaning and enrichment, replacing a manual Excel review process and surfacing anomalies it had missed</li>
-        <li>Identified data discrepancies and anomalies within the source data and reported them onward</li>
+        <li>Built an automated Alteryx workflow for cleaning and enrichment, standardizing airline, aircraft, and timestamp fields with lookup tables and fallback logic for missing values, replacing a manual Excel review process</li>
+        <li>Checked flagged anomalies against the source records to separate reporting errors from pipeline issues, and reported them onward</li>
         <li>Built a comprehensive automated Power BI dashboard covering airline activity — who flies, what aircraft, when, and where — designed to be reused each reporting cycle</li>
       </ul>
       <div class="tags"><span class="tag">Python</span><span class="tag">Parquet</span><span class="tag">Alteryx</span><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">DAX</span><span class="tag">ETL</span><span class="tag">Data Standardization</span></div>
@@ -245,8 +245,9 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
       <ul class="card-list">
         <li>Replaced direct SQL backend review — difficult to audit and impractical for hypothesis-forming — with a dashboard pulled from Amazon Redshift into Power BI</li>
         <li>Analyzed four fiscal years across TNC, off-airport parking, car rental, Turo, and Parkway revenue streams</li>
-        <li>Identified the driving factors behind ground transportation revenue and the performance drivers within each stream</li>
-        <li>Surfaced anomalies across the revenue streams and reported them for review</li>
+        <li>Broke revenue down by stream and driver, with year-over-year, month-over-month, and fiscal-year-to-date views for each stream</li>
+        <li>Traced misstated fiscal-year totals to aggregation-order and duplicate-rate defects in the DAX measures and fixed them, restoring accurate totals for leadership reporting</li>
+        <li>Flagged anomalies across the revenue streams with seasonal Z-scores, peer-deviation checks, and Benford's Law, and reported them for review</li>
         <li>Integrated ground transportation transaction volumes with the airline billing pipeline to compute per-mode passenger capture rates, supporting curbside staffing and concession demand analysis</li>
       </ul>
       <div class="tags"><span class="tag">SQL</span><span class="tag">Amazon Redshift</span><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Anomaly Detection</span><span class="tag">Benford's Law</span><span class="tag">ETL</span><span class="tag">Data Modeling</span></div>
@@ -297,6 +298,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <li>17 staging models resolving inconsistent project-type values, reserved-word conflicts, and date columns derived with SQL window functions</li>
         <li>7 conformed dimensions including an SCD Type 2 consultant dimension and a generated date spine for consistent time aggregation</li>
         <li>39 automated data-quality tests (38 passing, one documented upstream issue); reconciled design docs against the production schema and documented 13 discrepancies for the team</li>
+        <li>Set up the shared GitHub repo and onboarding docs, so 3 teammates could start building fact tables on the foundation within 24 hours</li>
       </ul>
       <div class="tags"><span class="tag">dbt</span><span class="tag">Snowflake</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Dimensional Modeling</span><span class="tag">SCD Type 2</span><span class="tag">ELT</span><span class="tag">Data Quality Testing</span></div>
       <div class="note">USC Viterbi · ISE-558 Data Engineering · foundation-layer owner on a 4-person team</div>
@@ -315,7 +317,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <li>Team orchestrated the winning gradient boosting model as an 8-component Kubeflow pipeline on Vertex AI with registry and endpoint deployment</li>
       </ul>
       <div class="tags"><span class="tag">GCP Vertex AI</span><span class="tag">Kubeflow</span><span class="tag">scikit-learn</span><span class="tag">SMOTE</span><span class="tag">Python</span><span class="tag">MLOps</span><span class="tag">Model Registry</span></div>
-      <div class="note">USC Viterbi · ISE-543 · data preparation owner on a team project</div>
+      <div class="note">USC Viterbi · ISE-543 Enterprise Cloud Analytics · data preparation owner on a team project</div>
     </div>
 
     <div class="card">
@@ -384,15 +386,15 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <div class="card-title">Sleep &amp; Cognition Research — Suen Lab, USC</div>
         <span class="badge b-ieee">Research</span>
       </div>
-      <div class="metrics"><span class="metric">6 years of Fitbit sleep data</span><span class="metric">5 cognitive tests</span><span class="metric">7 time windows</span></div>
+      <div class="metrics"><span class="metric">7 yearly sleep tables (2020–2026)</span><span class="metric">2 sleep datasets</span><span class="metric">1–7 day windows</span></div>
       <ul class="card-list">
-        <li>Built an 11-step cleaning pipeline for Fitbit sleep logs (2021–2026) across 5 source tables in BigQuery: overlap resolution, DST correction, cross-source deduplication, and one main sleep per person-night</li>
-        <li>Reconstructed fragmented sleep into continuous episodes (gap stitching within a night window) to build a second sleep dataset, and ran every analysis on both versions to test robustness</li>
-        <li>Linked 5 cognitive tests (Woodcock-Johnson battery, Stop-and-Go Switch, Figure Identification) to sleep across 7 time windows using mixed-effects regression, between/within-person decomposition, and FDR-corrected testing</li>
-        <li>Identified a wave/practice-effect confound that produced a spurious sleep–cognition association, and added time controls as a standard step across all analyses</li>
+        <li>Rebuilt the lab's Fitbit sleep pipeline in BigQuery over 7 yearly source tables: overlap resolution, cross-source deduplication, range checks, and one main sleep per person-night, with Fitbit-reported duration as the source of truth</li>
+        <li>Built a second, reconstructed dataset that stitches fragmented logs into continuous noon-to-noon nights, and run every analysis on both versions as a robustness check</li>
+        <li>Designed a person-level sleep and heart-rate wear-coverage audit (wear days, completeness, continuity) as a chain of BigQuery tables using gap-and-island SQL logic</li>
+        <li>Model sleep and cognition links across 1–7 day windows in Python with mixed-effects regression, between- and within-person views, and FDR-corrected testing</li>
       </ul>
       <div class="tags"><span class="tag">Python</span><span class="tag">BigQuery</span><span class="tag">SQL</span><span class="tag">statsmodels</span><span class="tag">pandas</span><span class="tag">Mixed-Effects Models</span><span class="tag">Multiple Testing</span><span class="tag">Data Cleaning</span></div>
-      <div class="note">Student Researcher · Prof. Sze-chuan Suen's lab, USC Viterbi (ISE) · Sep 2026 – Present · Understanding America Study data, used under a data use agreement — code and data are not public.</div>
+      <div class="note">Student Researcher · Prof. Sze-chuan Suen's lab, USC Viterbi (ISE) · Sep 2026 – Present · Understanding America Study data, used under a data use agreement — code, data, and results are not public.</div>
     </div>
 
     <div class="card">
@@ -462,7 +464,7 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
         <div class="f-meta">Philadelphia Department of Aviation · Finance Department · Jun 2026 – Aug 2026</div>
       </div>
     </div>
-    <p class="f-body">Built three analytics workflows for the Finance Department, each automated and scalable so anyone on the team can run them. Defined and built out the workflows end to end and documented the process in a written report. Presented the workflows and the Power BI dashboards to senior management, walking through the revenue trends and the anomalies surfaced along the way.</p>
+    <p class="f-body">Built three analytics workflows for the Finance Department, each automated and scalable so anyone on the team can run them. Defined and built out the workflows end to end and documented the process in a written report. Presented the workflows and the Power BI dashboards to senior management, and Finance now runs both revenue pipelines each reporting cycle on its own.</p>
     <div class="f-stats">
       <div><div class="f-n">~30%</div><div class="f-l">Of operating revenue covered</div></div>
       <div><div class="f-n">~60</div><div class="f-l">Hours/month of manual review saved</div></div>
@@ -492,7 +494,8 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
       <div class="t-head"><span class="t-title">Student Researcher</span><span class="t-date">Sep 2026 – Present</span></div>
       <div class="t-org">Prof. Sze-chuan Suen's Lab · USC Viterbi (ISE)</div>
       <ul class="t-list">
-        <li>Build the data cleaning pipeline and statistical analysis for a sleep and cognition study using Understanding America Study Fitbit and cognitive data in BigQuery</li>
+        <li>Build and maintain the Fitbit sleep pipeline in BigQuery for a sleep and cognition study on Understanding America Study data</li>
+        <li>Own the sleep and heart-rate coverage audit and the robustness checks across raw and reconstructed sleep datasets</li>
         <li>See the Sleep &amp; Cognition Research project above for details</li>
       </ul>
     </div>
@@ -511,19 +514,10 @@ footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);fo
       <div class="t-head"><span class="t-title">AI Intern</span><span class="t-date">May 2023 – Jul 2023</span></div>
       <div class="t-org">SmartInternz</div>
       <ul class="t-list">
-        <li>Built an end-to-end CNN-LSTM image captioning workflow on the Flickr8k dataset with structured preprocessing and hyperparameter tuning</li>
+        <li>Built an end-to-end CNN-LSTM image captioning model in Python with TensorFlow/Keras, pairing pretrained VGG16 image features with an LSTM decoder trained on 8,000 Flickr8k images</li>
+        <li>Preprocessed 40,000 captions (cleaning, tokenization, vocabulary building), tuned hyperparameters, and evaluated outputs with BLEU</li>
         <li>Developed a Flask-based prototype enabling interactive testing of model outputs</li>
         <li>Led a 3-member team coordinating pipeline design, training iterations, and error analysis</li>
-      </ul>
-    </div>
-    <div class="t-item">
-      <div class="t-dot"></div>
-      <div class="t-head"><span class="t-title">Azure Cloud Intern</span><span class="t-date">Sep 2022 – Oct 2022</span></div>
-      <div class="t-org">SmartKnower</div>
-      <ul class="t-list">
-        <li>Configured virtual machines and deployed Docker containers on Microsoft Azure</li>
-        <li>Managed Azure storage rules and access configurations across cloud environments</li>
-        <li>Designed process documentation to guide future interns in efficient VM and container management</li>
       </ul>
     </div>
   </div>
